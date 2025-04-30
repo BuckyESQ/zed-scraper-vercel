@@ -1,5 +1,3 @@
-https://zed-scraper-vercel-l4wx3y5az-david-a-prado-srs-projects.vercel.app/api/scrape
-
 import chromium from 'chrome-aws-lambda';
 import puppeteer from 'puppeteer-core';
 
@@ -55,4 +53,3 @@ export default async function handler(req, res) {
     await browser.close();
   }
 }
-
