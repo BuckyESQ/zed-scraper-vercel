@@ -1,4 +1,5 @@
-https://<your-project-name>.vercel.app/api/scrape
+https://zed-scraper-vercel-l4wx3y5az-david-a-prado-srs-projects.vercel.app/api/scrape
+
 import chromium from 'chrome-aws-lambda';
 import puppeteer from 'puppeteer-core';
 
