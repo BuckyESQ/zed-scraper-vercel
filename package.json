@@ -1,0 +1,10 @@
+{
+  "name": "zed-scraper-vercel",
+  "version": "0.1.0",
+  "type": "module",
+  "dependencies": {
+    "chrome-aws-lambda": "^10.1.0",
+    "puppeteer-core": "^19.11.1"
+  }
+}
+
