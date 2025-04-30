@@ -1,3 +1,4 @@
+https://<your-project-name>.vercel.app/api/scrape
 import chromium from 'chrome-aws-lambda';
 import puppeteer from 'puppeteer-core';
 
