@@ -3,60 +3,26 @@
   "version": "0.1.0",
   "type": "module",
   "dependencies": {
-    "chrome-aws-lambda": "^10.1.0",
+    "chrome-aws-lambda": "^11.0.0",
     "puppeteer-core": "^19.11.1"
-  }
-}
-{
-  "dependencies": {
-    "chrome-aws-lambda": "^11.0.0",      // or latest
-    "puppeteer-core": "^19.11.1"
-  }
-}
-{
+  },
   "scripts": {
     "start": "node api/index.js"
   },
   "engines": {
     "node": ">=16.0.0"
+  },
+  "vercel": {
+    "version": 2,
+    "functions": {
+      "api/**/*.js": {
+        "runtime": "@vercel/node@2.0.0",
+        "memory": 512,
+        "maxDuration": 60
+      }
+    },
+    "routes": [
+      { "src": "/api/(.*)", "dest": "/api/$1.js" }
+    ]
   }
-}
-{
-  "version": 2,
-  "functions": {
-    "api/**/*.js": {
-      "runtime": "@vercel/node@2.0.0",
-      "memory": 512,
-      "maxDuration": 60
-    }
-  },
-  "routes": [
-    { "src": "/api/(.*)", "dest": "/api/$1.js" }
-  ]
-}
-{
-  "version": 2,
-  "functions": {
-    "api/**/*.js": {
-      "runtime": "@vercel/node@2.0.0",
-      "memory": 512,
-      "maxDuration": 60
-    }
-  },
-  "routes": [
-    { "src": "/api/(.*)", "dest": "/api/$1.js" }
-  ]
-}
-{
-  "version": 2,
-  "functions": {
-    "api/**/*.js": {
-      "runtime": "@vercel/node@2.0.0",
-      "memory": 512,
-      "maxDuration": 60
-    }
-  },
-  "routes": [
-    { "src": "/api/(.*)", "dest": "/api/$1.js" }
-  ]
 }
